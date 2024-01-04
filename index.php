@@ -9,8 +9,9 @@ $secondCurrency = $_POST['second_currency'];
 $amount = 0.05;
 $firstCurrency = 'BTC';
 $secondCurrency = 'ZEC';
+$key = '';
 
-$url = "https://changee.com/v1/api/exchange-create?key=a16b59f53c6c44829aa6758055af6b2f&from={$firstCurrency}&to={$secondCurrency}&amount={$amount}&fix=0&destinationAddress=t1PS2q82NcaDvjr2ZSAeVfLh79Xmbfutv5j&refundAddress=1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2";
+$url = "https://changee.com/v1/api/exchange-create?key={$key}&from={$firstCurrency}&to={$secondCurrency}&amount={$amount}&fix=0&destinationAddress=t1PS2q82NcaDvjr2ZSAeVfLh79Xmbfutv5j&refundAddress=1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2";
 
 $curl = \curl_init();
 \curl_setopt($curl, CURLOPT_URL, $url);
